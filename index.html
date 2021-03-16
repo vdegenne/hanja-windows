@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Hello World!</title>
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+</head>
+<body>
+  <style>
+    body {
+      margin: 0;
+      background-color: black;
+      color: white;
+      font-family: Roboto;
+    }
+    #container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 40px;
+      height: 100vh;
+    }
+  </style>
+  <form id="theform" onsubmit="submitCharacter();">
+    <input id="theinput" placeholder="character" autofocus>
+  </form>
+
+  <div id="container">
+
+  </div>
+
+  <script>
+    let character;
+    function submitCharacter () {
+      character = theform.theinput.value;
+      theform.remove();
+      container.innerText = character;
+      document.body.style.backgroundColor = 'transparent';
+    }
+  </script>
+</body>
+</html>

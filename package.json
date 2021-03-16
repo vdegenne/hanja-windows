@@ -1,0 +1,11 @@
+{
+  "name": "hanja-windows",
+  "devDependencies": {
+    "electron": "^11.2.1"
+  },
+  "scripts": {
+    "start": "electron --enable-transparent-visuals --disable-gpu ."
+  },
+  "main": "main.js",
+  "bin": "run.sh"
+}
